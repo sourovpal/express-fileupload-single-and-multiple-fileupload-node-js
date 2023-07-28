@@ -14,7 +14,7 @@ app.post('/', (req, res)=>{
 
 
   var file = req.files.sample_image;
-  
+  // root dir process.cwd()
   upload_path = __dirname+'/uploads/' + file.name;
 
   file.mv(upload_path, function(err) {
